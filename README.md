@@ -8,7 +8,6 @@ Shoppin is a web application that allows users to customize and purchase their o
 - [Usage](#usage)
 - [Features](#features)
 - [Key Components](#key-components)
-- [Learn More](#learn-more)
 
 ## Installation
 
