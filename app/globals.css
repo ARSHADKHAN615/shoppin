@@ -4,21 +4,21 @@
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('/fonts/SF-Pro-Display-Regular.woff2') format('woff2');
+  src: url('/fonts/sf-pro-display-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('/fonts/SF-Pro-Display-Medium.woff2') format('woff2');
+  src: url('/fonts/sf-pro-display-medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('/fonts/SF-Pro-Display-Semibold.woff2') format('woff2');
+  src: url('/fonts/sf-pro-display-semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
@@ -28,6 +28,10 @@
 }
 
 body {
+  font-family: var(--font-sf-pro);
+}
+
+h1 {
   font-family: var(--font-sf-pro);
 }
 

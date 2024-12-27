@@ -10,7 +10,8 @@ interface WatchDisplayProps {
 export default function WatchDisplay({ isStarted, selectedCase, selectedBand }: WatchDisplayProps) {
   return (
     <motion.div
-      className={`relative ${isStarted ? 'w-[500px] h-[500px]' : 'w-[700px] h-[700px]'}`}
+      className={`relative w-full max-w-full md:max-w-[700px] aspect-square mx-auto
+        ${isStarted ? 'lg:max-w-[500px]' : 'lg:max-w-[700px]'}`}
       initial={false}
       animate={{
         scale: isStarted ? 0.8 : 1,
@@ -38,7 +39,8 @@ export default function WatchDisplay({ isStarted, selectedCase, selectedBand }: 
             src={selectedBand}
             alt="Watch Band"
             fill
-            className="object-contain"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 700px"
+            className="object-contain w-full"
             priority
           />
         </motion.div>
@@ -57,10 +59,11 @@ export default function WatchDisplay({ isStarted, selectedCase, selectedBand }: 
           src={selectedCase}
           alt="Watch Case"
           fill
-          className="object-contain"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 700px"
+          className="object-contain w-full"
           priority
         />
       </motion.div>
     </motion.div>
   );
-} 
+}
