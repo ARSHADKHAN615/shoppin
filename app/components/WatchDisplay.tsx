@@ -5,12 +5,13 @@ interface WatchDisplayProps {
   isStarted: boolean;
   selectedCase: string;
   selectedBand: string;
+  children?: React.ReactNode;
 }
 
-export default function WatchDisplay({ isStarted, selectedCase, selectedBand }: WatchDisplayProps) {
+export default function WatchDisplay({ isStarted, selectedCase, selectedBand, children }: WatchDisplayProps) {
   return (
     <motion.div
-      className={`relative w-full max-w-full md:max-w-[700px] aspect-square mx-auto
+      className={`relative w-full max-w-full md:max-w-[700px] aspect-square mx-auto watch-display
         ${isStarted ? 'lg:max-w-[500px]' : 'lg:max-w-[700px]'}`}
       initial={false}
       animate={{
@@ -64,6 +65,7 @@ export default function WatchDisplay({ isStarted, selectedCase, selectedBand }: 
           priority
         />
       </motion.div>
+      {children}
     </motion.div>
   );
 }

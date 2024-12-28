@@ -18,11 +18,11 @@ interface WatchCarouselProps {
   listElements: ListElements[] | [];
   onElementSelect?: (element: ListElements) => void;
   currentStep?: string;
+  currentIndex: number;
+  setCurrentIndex: (index: number) => void;
 }
 
-export default function WatchCarousel({ fixedElement, listElements, onElementSelect, currentStep }: WatchCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+export default function WatchCarousel({ fixedElement, listElements, onElementSelect, currentStep, currentIndex, setCurrentIndex }: WatchCarouselProps) {
   const handleNext = () => {
     if (currentIndex < listElements.length - 1) {
       setCurrentIndex(currentIndex + 1);
