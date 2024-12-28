@@ -184,6 +184,7 @@ export default function Home() {
     if (currentItem) {
       handleElementSelect(currentItem as ListElements);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex, currentStep]);
 
   const calculateTotalPrice = () => {
